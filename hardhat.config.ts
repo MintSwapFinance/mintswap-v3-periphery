@@ -3,6 +3,7 @@ import '@nomiclabs/hardhat-etherscan'
 import '@nomiclabs/hardhat-waffle'
 import 'hardhat-typechain'
 import 'hardhat-watcher'
+import 'dotenv/config';
 
 const LOW_OPTIMIZER_COMPILER_SETTINGS = {
   version: '0.7.6',
@@ -78,6 +79,10 @@ export default {
     optimism: {
       url: `https://optimism-mainnet.infura.io/v3/${process.env.INFURA_API_KEY}`,
     },
+    mintTest: {
+      url: `https://testnet-rpc.mintchain.io`,
+      accounts: [process.env.PRIVATE_KEY_DEPLOYER]
+    }
   },
   etherscan: {
     // Your API key for Etherscan
