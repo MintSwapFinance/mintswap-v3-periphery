@@ -80,8 +80,9 @@ export default {
       url: `https://optimism-mainnet.infura.io/v3/${process.env.INFURA_API_KEY}`,
     },
     mintTest: {
-      url: `https://testnet-rpc.mintchain.io`,
-      accounts: [process.env.PRIVATE_KEY_DEPLOYER]
+      url: `https://sepolia-testnet-rpc.mintchain.io`,
+      accounts: [process.env.PRIVATE_KEY_DEPLOYER],
+      gasPrice: 1000000000,
     }
   },
   etherscan: {
