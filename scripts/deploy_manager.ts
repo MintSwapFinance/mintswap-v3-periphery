@@ -2,8 +2,8 @@ import { ethers } from "hardhat";
 
 async function main() {
   const NonfungiblePositionManager = await ethers.getContractFactory("NonfungiblePositionManager");
-  const manager = await NonfungiblePositionManager.deploy("0xB6C8B971650d96BD58c9Ba16DcFe685Bc1472e82", "0x4200000000000000000000000000000000000006", 
-  "0xeA397955CC97F4DE4f44a31839b4E9B7f2d04803");
+  const manager = await NonfungiblePositionManager.deploy("0x1f88BB455E02646224A0a65f3eb4B2FCb4fb8e49", "0x4200000000000000000000000000000000000006", 
+  "0xfD5b032CD2d36F566F832e1E5eD899aFC61017B1");
 
   await manager.deployed();
 
